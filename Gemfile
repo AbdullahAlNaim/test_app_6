@@ -10,8 +10,7 @@ gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3", "~> 1.4"
-gem 'sqlite3', "~> 1.4", group: :development
-gem 'pg', '0.18.1', group: :production
+
 
 # gem 'rails_12factor', group: :production
 
@@ -67,7 +66,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '0.18.1'
+  gem 'pg', "~> 1.5.6"
 end
 
 group :test do
