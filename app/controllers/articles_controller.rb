@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   def edit
   end
 
-  def create
+  def create  
     @article = Article.new(article_params)
 
     if @article.save

@@ -1,4 +1,6 @@
-<% if @article.errors.any? %>
+
+<div class="container artic adding">
+  <% if @article.errors.any? %>
   <h2>The following Errors preventing the article from being saved</h2>
   <ul>
     <% @article.errors.full_messages.each do |msg| %>
@@ -6,7 +8,6 @@
     <% end %>
   </ul>
 <% end %>
-
 <%= form_with(model: @article, local: true) do |f| %>
   <p>
     <%= f.label :title%> <br>
@@ -17,6 +18,7 @@
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.submit%>
+    <%= f.submit %>
   </p>
 <% end %>
+</div>

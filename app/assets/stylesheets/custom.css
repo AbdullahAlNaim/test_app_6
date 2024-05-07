@@ -1,5 +1,5 @@
 .navbar {
-  background-color: black !important;
+  background-color: rgb(48, 48, 48) !important;
 }
 
 .nav-link {
@@ -13,10 +13,35 @@
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
+  margin-right: 10px;
 }
 
 #home-container {
   margin-top: 25px;
+}
+
+.text-white {
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: white;
+}
+
+.artic {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adding {
+  background-color: rgb(119, 159, 182);
+  width: 400px;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .jumbotron {
@@ -29,7 +54,11 @@
 
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 #page-content {
@@ -39,6 +68,18 @@ body {
 
 #sticky-footer {
   flex-shrink: none;
+  /* background-color: #aaaaaa; */
+  background-color: rgb(48, 48, 48);
+  color: white;
+  /* position: absolute; */
+  margin-top: auto;
+
+  width: 100%;
+  bottom: 0;
+}
+
+.making {
+  margin: 20px
 }
 
 /* pagination styling */
