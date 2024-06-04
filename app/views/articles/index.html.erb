@@ -6,7 +6,10 @@
     <% @articles.each do |article|%>
     <div class="card text-center mb-3" style="width: 20rem;">
       <div class="card-body">
+        by: <%= article.user.username if article.user %>
+          <br>
         <h5 class="card-title">
+          
           <%= article.title %>
           </h5>
         <p class="card-text">
