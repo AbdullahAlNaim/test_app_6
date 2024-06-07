@@ -12127,3 +12127,536 @@ Migrating to AddPasswordDigestToUsers (20240605015031)
   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240605015031') RETURNING "version"[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "Safiyah"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "safiyah@gmail.com"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "Safiyah"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "safiyah@gmail.com"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "Safiyah"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "safiyah@gmail.com"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "Safiyah"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "safiyah@gmail.com"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "Safiyah"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "safiyah@gmail.com"], ["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/articles" for ::1 at 2024-06-04 22:40:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 5278)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 5364)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.6ms | Allocations: 7450)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:19:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/views/articles/index.html.erb:7
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2024-06-04 22:40:27 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 5720)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 5806)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.8ms | Allocations: 7893)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:19:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/views/articles/index.html.erb:7
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2024-06-04 22:41:20 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 21.8ms | Allocations: 5822)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 5908)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.8ms | Allocations: 7992)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:18:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/views/articles/index.html.erb:7
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2024-06-04 22:41:42 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 5824)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 5910)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.8ms | Allocations: 7994)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:17:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/views/articles/index.html.erb:7
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2024-06-04 22:42:43 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  Rendered articles/index.html.erb within layouts/application (Duration: 68.9ms | Allocations: 25882)
+  Rendered layouts/_navigation.html.erb (Duration: 0.7ms | Allocations: 345)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 168)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 562.1ms | Allocations: 86247)
+Completed 200 OK in 623ms (Views: 571.6ms | ActiveRecord: 2.2ms | Allocations: 98528)
+
+
+Started GET "/signup" for ::1 at 2024-06-04 22:42:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started GET "/signup" for ::1 at 2024-06-04 22:43:15 -0400
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/signup" for ::1 at 2024-06-04 22:44:34 -0400
+Processing by UsersController#new as HTML
+Completed 406 Not Acceptable in 10ms (ActiveRecord: 0.0ms | Allocations: 867)
+
+
+  
+ActionController::MissingExactTemplate (UsersController#new is missing a template for request formats: text/html):
+  
+actionpack (7.1.3.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.3.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.10) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/method_override.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/signup" for ::1 at 2024-06-04 22:48:58 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 88)
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 358)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 27363)
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 0.0ms | Allocations: 28281)
+
+
+Started GET "/signup" for ::1 at 2024-06-04 22:52:25 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 424)
+  Rendered layouts/_navigation.html.erb (Duration: 0.6ms | Allocations: 321)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 27649)
+Completed 200 OK in 68ms (Views: 62.8ms | ActiveRecord: 0.0ms | Allocations: 28565)
+
+
+Started GET "/articles" for ::1 at 2024-06-04 22:52:28 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  Rendered articles/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 12711)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 19356)
+Completed 200 OK in 54ms (Views: 43.3ms | ActiveRecord: 2.4ms | Allocations: 21027)
+
+
+Started GET "/signup" for ::1 at 2024-06-04 22:52:37 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 355)
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 356)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 57.9ms | Allocations: 27629)
+Completed 200 OK in 75ms (Views: 63.8ms | ActiveRecord: 0.0ms | Allocations: 28545)
+
+
+Started GET "/signup" for ::1 at 2024-06-04 22:52:45 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 333)
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 356)
+  Rendered layouts/_messages.html.erb (Duration: 0.5ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 57.4ms | Allocations: 27598)
+Completed 200 OK in 73ms (Views: 63.4ms | ActiveRecord: 0.0ms | Allocations: 28514)
+
+
+Started GET "/signup" for ::1 at 2024-06-04 22:53:32 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 3.4ms | Allocations: 1387)
+  Rendered users/_form.html.erb (Duration: 5.6ms | Allocations: 1791)
+  Rendered users/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2040)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 2126)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 3027)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @article.errors.any? %>
+    2:   <h2>The following Errors preventing the article from being saved</h2>
+    3:   <ul>
+    4:     <% @article.errors.full_messages.each do |msg| %>
+  
+app/views/shared/_errors.html.erb:1
+app/views/users/_form.html.erb:2
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2024-06-04 22:55:36 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.0ms | Allocations: 1366)
+  Rendered users/_form.html.erb (Duration: 3.1ms | Allocations: 1761)
+  Rendered users/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2010)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2096)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.7ms | Allocations: 7547)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @article.errors.any? %>
+    2:   <h2>The following Errors preventing the article from being saved</h2>
+    3:   <ul>
+    4:     <% @article.errors.full_messages.each do |msg| %>
+  
+app/views/shared/_errors.html.erb:1
+app/views/users/_form.html.erb:2
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2024-06-04 22:58:28 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.7ms | Allocations: 1366)
+  Rendered users/_form.html.erb (Duration: 2.8ms | Allocations: 1760)
+  Rendered users/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2009)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2095)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.9ms | Allocations: 7522)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @article.errors.any? %>
+    2:   <h2>The following Errors preventing the article from being saved</h2>
+    3:   <ul>
+    4:     <% @article.errors.full_messages.each do |msg| %>
+  
+app/views/shared/_errors.html.erb:1
+app/views/users/_form.html.erb:2
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2024-06-04 23:00:24 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.2ms | Allocations: 1366)
+  Rendered users/_form.html.erb (Duration: 3.1ms | Allocations: 1808)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2057)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2143)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.9ms | Allocations: 7574)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @article.errors.any? %>
+    2:   <h2>The following Errors preventing the article from being saved</h2>
+    3:   <ul>
+    4:     <% @article.errors.full_messages.each do |msg| %>
+  
+app/views/shared/_errors.html.erb:1
+app/views/users/_form.html.erb:2
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2024-06-04 23:02:05 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.0ms | Allocations: 1371)
+  Rendered users/_form.html.erb (Duration: 10.1ms | Allocations: 1813)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2062)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 2148)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.8ms | Allocations: 7576)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `obj' for #<ActionView::Base:0x00000000035f48>):
+    1: <% if obj.errors.any? %>
+    2:   <h2>The following Errors preventing the article from being saved</h2>
+    3:   <ul>
+    4:     <% obj.errors.full_messages.each do |msg| %>
+  
+app/views/shared/_errors.html.erb:1
+app/views/users/_form.html.erb:2
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2024-06-04 23:03:04 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.5ms | Allocations: 190)
+  Rendered users/_form.html.erb (Duration: 3.3ms | Allocations: 1825)
+  Rendered users/new.html.erb within layouts/application (Duration: 17.4ms | Allocations: 2075)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 2161)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 2.1ms | Allocations: 7592)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x00000000039df0>):
+    1: <div class="container artic adding">
+    2:   <%= render 'shared/errors', obj: @user %>
+    3: 
+    4:   <%= form_for @user do |f| %>
+    5:     <p>
+    6:       <%= f.label :username%> <br>
+    7:       <%= f.text_field :username, placeholder: "username" %>
+  
+app/views/users/_form.html.erb:4
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2024-06-04 23:05:37 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered users/_form.html.erb (Duration: 6.0ms | Allocations: 2778)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3029)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3115)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.7ms | Allocations: 8542)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<ActionView::Helpers::FormBuilder:0x00000298a17d4d80 @nested_child_index={}, @options={:allow_method_names_outside_object=>false, :skip_default_ids=>false, :html=>{:class=>"new_user", :id=>"new_user"}, :local=>true}, @template=#<ActionView::Base:0x0000000003dd60>, @object=#<User id: nil, username: nil, email: nil, created_at: nil, updated_at: nil, password_digest: nil>, @object_name="user", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>false}, @default_html_options={}, @multipart=nil, @index=nil>):
+     8:     </p>
+     9:     <p>
+    10:       <%= f.label :email %> <br>
+    11:       <%= f.email :email, placeholder: "email" %>
+    12:     </p>
+    13:     <p>
+    14:       <%= f.label :password %> <br>
+  
+app/views/users/_form.html.erb:11
+app/views/users/_form.html.erb:4
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2024-06-04 23:06:13 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 2189)
+  Rendered users/new.html.erb within layouts/application (Duration: 17.5ms | Allocations: 2439)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 2525)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.8ms | Allocations: 7952)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<ActionView::Helpers::FormBuilder:0x00000298a0e92808 @nested_child_index={}, @options={:allow_method_names_outside_object=>false, :skip_default_ids=>false, :html=>{:class=>"new_user", :id=>"new_user"}, :local=>true}, @template=#<ActionView::Base:0x00000000041cf8>, @object=#<User id: nil, username: nil, email: nil, created_at: nil, updated_at: nil, password_digest: nil>, @object_name="user", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>false}, @default_html_options={}, @multipart=nil, @index=nil>):
+     8:     </p>
+     9:     <p>
+    10:       <%= f.label :email %> <br>
+    11:       <%= f.email :email_field, placeholder: "email" %>
+    12:     </p>
+    13:     <p>
+    14:       <%= f.label :password %> <br>
+  
+app/views/users/_form.html.erb:11
+app/views/users/_form.html.erb:4
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2024-06-04 23:07:39 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered users/_form.html.erb (Duration: 12.4ms | Allocations: 2594)
+  Rendered users/new.html.erb within layouts/application (Duration: 26.8ms | Allocations: 2844)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 2930)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.7ms | Allocations: 8357)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<ActionView::Helpers::FormBuilder:0x00000298a0e9dc08 @nested_child_index={}, @options={:allow_method_names_outside_object=>false, :skip_default_ids=>false, :html=>{:class=>"new_user", :id=>"new_user"}, :local=>true}, @template=#<ActionView::Base:0x00000000045cb8>, @object=#<User id: nil, username: nil, email: nil, created_at: nil, updated_at: nil, password_digest: nil>, @object_name="user", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>false}, @default_html_options={}, @multipart=nil, @index=nil>):
+    12:     </p>
+    13:     <p>
+    14:       <%= f.label :password %> <br>
+    15:       <%= f.password :password, placeholder: "password" %>
+    16:     </p>
+    17:     <p>
+    18:       <%= f.submit %>
+  
+app/views/users/_form.html.erb:15
+app/views/users/_form.html.erb:4
+app/views/users/new.html.erb:4
+Started GET "/signup" for ::1 at 2024-06-04 23:07:49 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.5ms | Allocations: 183)
+  Rendered users/_form.html.erb (Duration: 13.9ms | Allocations: 1975)
+  Rendered users/new.html.erb within layouts/application (Duration: 27.5ms | Allocations: 2223)
+  Rendered layouts/_navigation.html.erb (Duration: 0.6ms | Allocations: 327)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 83.0ms | Allocations: 29256)
+Completed 200 OK in 99ms (Views: 88.3ms | ActiveRecord: 1.7ms | Allocations: 34704)
+
+
+Started GET "/signup" for ::1 at 2024-06-04 23:08:59 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered users/_form.html.erb (Duration: 3.5ms | Allocations: 1671)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1921)
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 327)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 28951)
+Completed 200 OK in 81ms (Views: 69.3ms | ActiveRecord: 1.9ms | Allocations: 34399)
+
+
