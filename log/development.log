@@ -13305,6 +13305,7 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 103ms (Views: 99.4ms | ActiveRecord: 0.0ms | Allocations: 8325)
 
 
+<<<<<<< HEAD
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
 Started GET "/users/3/edit" for ::1 at 2024-06-13 10:17:03 -0400
   
@@ -13833,3 +13834,5 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.2ms | Allocations: 11731)
 
 
+=======
+>>>>>>> users-edit
