@@ -13263,3 +13263,573 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 40ms (Views: 29.9ms | ActiveRecord: 0.0ms | Allocations: 12388)
 
 
+Started GET "/signup" for ::1 at 2024-06-10 14:15:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.7ms | Allocations: 216)
+  Rendered users/_form.html.erb (Duration: 62.0ms | Allocations: 2947)
+  Rendered users/new.html.erb within layouts/application (Duration: 76.0ms | Allocations: 3328)
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 347)
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 168)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 921.6ms | Allocations: 61780)
+Completed 200 OK in 1248ms (Views: 981.0ms | ActiveRecord: 2.8ms | Allocations: 83061)
+
+
+Started GET "/signup" for ::1 at 2024-06-13 10:03:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.8ms | Allocations: 216)
+  Rendered users/_form.html.erb (Duration: 81.2ms | Allocations: 2947)
+  Rendered users/new.html.erb within layouts/application (Duration: 99.2ms | Allocations: 3328)
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 349)
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 168)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 995.8ms | Allocations: 61991)
+Completed 200 OK in 1345ms (Views: 1055.5ms | ActiveRecord: 2.6ms | Allocations: 83182)
+
+
+Started GET "/" for ::1 at 2024-06-13 10:13:56 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 168)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 95.5ms | Allocations: 7849)
+Completed 200 OK in 103ms (Views: 99.4ms | ActiveRecord: 0.0ms | Allocations: 8325)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/3/edit" for ::1 at 2024-06-13 10:17:03 -0400
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for UsersController):
+  
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.10) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/method_override.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users/3/edit" for ::1 at 2024-06-13 10:18:27 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `edit'
+Completed 406 Not Acceptable in 48ms (ActiveRecord: 11.5ms | Allocations: 8474)
+
+
+  
+ActionController::MissingExactTemplate (UsersController#edit is missing a template for request formats: text/html):
+  
+actionpack (7.1.3.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.3.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.10) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/method_override.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users/3/edit" for ::1 at 2024-06-13 10:19:46 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.4ms | Allocations: 196)
+  Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 1660)
+  Rendered users/edit.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1912)
+  Rendered layouts/_navigation.html.erb (Duration: 0.6ms | Allocations: 329)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 65.6ms | Allocations: 28970)
+Completed 200 OK in 90ms (Views: 71.7ms | ActiveRecord: 2.4ms | Allocations: 35415)
+
+
+Started GET "/users/5/edit" for ::1 at 2024-06-13 10:19:56 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/_form.html.erb (Duration: 1.2ms | Allocations: 947)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1010)
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 7338)
+Completed 200 OK in 30ms (Views: 25.5ms | ActiveRecord: 0.1ms | Allocations: 7966)
+
+
+Started GET "/users/10/edit" for ::1 at 2024-06-13 10:20:05 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered users/_form.html.erb (Duration: 1.5ms | Allocations: 950)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1013)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 7286)
+Completed 200 OK in 34ms (Views: 29.9ms | ActiveRecord: 0.1ms | Allocations: 7915)
+
+
+Started GET "/users/10/edit" for ::1 at 2024-06-13 10:21:55 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.6ms | Allocations: 196)
+  Rendered users/_form.html.erb (Duration: 5.2ms | Allocations: 1623)
+  Rendered users/edit.html.erb within layouts/application (Duration: 23.0ms | Allocations: 1873)
+  Rendered layouts/_navigation.html.erb (Duration: 0.7ms | Allocations: 327)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 75.3ms | Allocations: 28897)
+Completed 200 OK in 93ms (Views: 80.7ms | ActiveRecord: 1.8ms | Allocations: 35328)
+
+
+Started PATCH "/users/10" for ::1 at 2024-06-13 10:22:09 -0400
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"jamima", "email"=>"jamima@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "id"=>"10"}
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 9ms (ActiveRecord: 0.0ms | Allocations: 697)
+
+
+Started PATCH "/users/10" for ::1 at 2024-06-13 10:22:15 -0400
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"jamima", "email"=>"jamima@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "id"=>"10"}
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 370)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/10/edit" for ::1 at 2024-06-13 10:24:57 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.4ms | Allocations: 196)
+  Rendered users/_form.html.erb (Duration: 3.3ms | Allocations: 1648)
+  Rendered users/edit.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1898)
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 327)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 63.3ms | Allocations: 28925)
+Completed 200 OK in 83ms (Views: 68.9ms | ActiveRecord: 1.9ms | Allocations: 35356)
+
+
+Started PATCH "/users/10" for ::1 at 2024-06-13 10:25:11 -0400
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"jamima", "email"=>"jamima@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "jamima"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "jamima@example.com"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "email" = ?, "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?[0m  [["username", "jamima"], ["email", "jamima@example.com"], ["updated_at", "2024-06-13 14:25:11.958869"], ["password_digest", "[FILTERED]"], ["id", 10]]
+  ↳ app/controllers/users_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `update'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 191ms (ActiveRecord: 4.1ms | Allocations: 5751)
+
+
+Started GET "/articles" for ::1 at 2024-06-13 10:25:11 -0400
+Processing by ArticlesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  Rendered articles/index.html.erb within layouts/application (Duration: 84.3ms | Allocations: 12386)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 113.5ms | Allocations: 18917)
+Completed 200 OK in 178ms (Views: 117.4ms | ActiveRecord: 0.4ms | Allocations: 20718)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2024-06-13 10:26:29 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  Rendered articles/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3834)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 10276)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.1ms | Allocations: 10555)
+
+
+Started GET "/articles/new" for ::1 at 2024-06-13 10:26:32 -0400
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered articles/_form.html.erb (Duration: 95.6ms | Allocations: 8651)
+  Rendered articles/new.html.erb within layouts/application (Duration: 107.6ms | Allocations: 8944)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 131.9ms | Allocations: 15187)
+Completed 200 OK in 146ms (Views: 132.5ms | ActiveRecord: 0.0ms | Allocations: 15543)
+
+
+Started POST "/articles" for ::1 at 2024-06-13 10:26:44 -0400
+Processing by ArticlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"beautiful", "description"=>"dream girl"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "description", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "beautiful"], ["description", "dream girl"], ["created_at", "2024-06-13 14:26:44.195141"], ["updated_at", "2024-06-13 14:26:44.195141"], ["user_id", 2]]
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+Redirected to http://localhost:3000/articles/17
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms | Allocations: 3056)
+
+
+Started GET "/articles/17" for ::1 at 2024-06-13 10:26:44 -0400
+Processing by ArticlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"17"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:49:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:2
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 779)
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 7226)
+Completed 200 OK in 45ms (Views: 24.5ms | ActiveRecord: 0.2ms | Allocations: 8551)
+
+
+Started GET "/articles" for ::1 at 2024-06-13 10:26:48 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4393)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 10818)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.3ms | Allocations: 11099)
+
+
+Started GET "/articles/17/edit" for ::1 at 2024-06-13 10:27:06 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:49:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered articles/_form.html.erb (Duration: 1.2ms | Allocations: 872)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1144)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 7471)
+Completed 200 OK in 51ms (Views: 29.9ms | ActiveRecord: 0.1ms | Allocations: 8155)
+
+
+Started GET "/articles" for ::1 at 2024-06-13 10:27:34 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  Rendered articles/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 13292)
+  Rendered layouts/_navigation.html.erb (Duration: 0.7ms | Allocations: 327)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 71.1ms | Allocations: 40567)
+Completed 200 OK in 84ms (Views: 74.5ms | ActiveRecord: 2.2ms | Allocations: 42678)
+
+
+Started GET "/articles/new" for ::1 at 2024-06-13 10:27:37 -0400
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.5ms | Allocations: 195)
+  Rendered articles/_form.html.erb (Duration: 4.0ms | Allocations: 1413)
+  Rendered articles/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1700)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 8041)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 8397)
+
+
+Started POST "/articles" for ::1 at 2024-06-13 10:28:03 -0400
+Processing by ArticlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"Dream Girl", "description"=>"I hope I marry someone as beautiful as her"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "description", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Dream Girl"], ["description", "I hope I marry someone as beautiful as her"], ["created_at", "2024-06-13 14:28:03.887795"], ["updated_at", "2024-06-13 14:28:03.887795"], ["user_id", 10]]
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+Redirected to http://localhost:3000/articles/18
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms | Allocations: 2894)
+
+
+Started GET "/articles/18" for ::1 at 2024-06-13 10:28:03 -0400
+Processing by ArticlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:49:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:2
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 773)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 7299)
+Completed 200 OK in 29ms (Views: 24.0ms | ActiveRecord: 0.1ms | Allocations: 8661)
+
+
+Started GET "/articles" for ::1 at 2024-06-13 10:28:05 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:7
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 5013)
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 11450)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.2ms | Allocations: 11731)
+
+
