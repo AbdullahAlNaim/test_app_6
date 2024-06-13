@@ -1,8 +1,14 @@
-<h1>Showing Article Details</h1>
-<p>by: <%= @article.user.username %></p>
-<p>Title: <b><%= @article.title %></b></p>
-<p>Description: <b> <%= @article.description %></b></p>
+<div class="container artic">
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Delete', article_path(@article), data:{ turbo_method: :delete, confirm: "Are you sure?" } %> |
-<%= link_to 'Return to articles listing', articles_path %>
+  <h1>Showing Article Details</h1>
+  <p>by: <%= @article.user.username %></p>
+
+  <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
+
+  <p>Title: <b><%= @article.title %></b></p>
+  <p>Description: <b> <%= @article.description %></b></p>
+
+  <%= link_to 'Edit', edit_article_path(@article) %> 
+  <%= link_to 'Delete', article_path(@article), data:{ turbo_method: :delete, confirm: "Are you sure?" } %> 
+  <%= link_to 'Return to articles listing', articles_path %>
+</div>

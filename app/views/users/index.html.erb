@@ -1,0 +1,32 @@
+<div class="container artic">
+  <h1>Alpha Bloggers</h1>
+
+  <div class="container artic">
+  <h1>Article Listing Page</h1>
+  <%= link_to 'Create new article',new_article_path, class: "btn btn-primary text-white making" %>
+
+    <% @users.each do |user|%>
+    <div class="card text-center mb-3" style="width: 20rem;">
+      <div class="card-body">
+        <%= link_to user.username, user %>
+          <br>
+        <h5 class="card-title">
+          
+          <%= link_to gravatar_for(user, size: 150), user %>
+        </h5>
+        
+        <p class="card-text">
+          <%= pluralize(user.articles.count, "article") %>
+        </p>
+        <div class="btn btn-primary text-white">
+          <%= link_to 'View profile', user, class: "text-white" %>
+          </div>
+        <%= link_to 'edit profile', edit_user_path(user), class: "btn btn-primary text-white" %>
+      </div>
+      <p>
+        Joined <%= user.created_at.strftime("%B %d %Y, %l:%M%P") %>
+      </p>
+    </div>
+    <% end %>
+</div>
+</div>
