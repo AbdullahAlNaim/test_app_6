@@ -13263,3 +13263,45 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 40ms (Views: 29.9ms | ActiveRecord: 0.0ms | Allocations: 12388)
 
 
+Started GET "/signup" for ::1 at 2024-06-10 14:15:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.7ms | Allocations: 216)
+  Rendered users/_form.html.erb (Duration: 62.0ms | Allocations: 2947)
+  Rendered users/new.html.erb within layouts/application (Duration: 76.0ms | Allocations: 3328)
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 347)
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 168)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 921.6ms | Allocations: 61780)
+Completed 200 OK in 1248ms (Views: 981.0ms | ActiveRecord: 2.8ms | Allocations: 83061)
+
+
+Started GET "/signup" for ::1 at 2024-06-13 10:03:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.8ms | Allocations: 216)
+  Rendered users/_form.html.erb (Duration: 81.2ms | Allocations: 2947)
+  Rendered users/new.html.erb within layouts/application (Duration: 99.2ms | Allocations: 3328)
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 349)
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 168)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 995.8ms | Allocations: 61991)
+Completed 200 OK in 1345ms (Views: 1055.5ms | ActiveRecord: 2.6ms | Allocations: 83182)
+
+
+Started GET "/" for ::1 at 2024-06-13 10:13:56 -0400
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 168)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_messages.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 95.5ms | Allocations: 7849)
+Completed 200 OK in 103ms (Views: 99.4ms | ActiveRecord: 0.0ms | Allocations: 8325)
+
+
