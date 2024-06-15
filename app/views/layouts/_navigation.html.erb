@@ -15,6 +15,24 @@
         <li class="nav-item nav-link">
           <%= link_to "Bloggers", users_path, class: "text-white" %>
         </li>
+        
+        <% if logged_in? %>
+        <li class="nav-item nav-link">
+            <%= link_to current_user.username, user_path(current_user), class: "text-white" %>
+          </li>
+          <li class="nav-item nav-link">
+            <%= link_to "Log out", logout_path, class: "text-white",  data:{ "turbo-method": :delete } %>
+          </li>
+        <% else %>
+          <li class="nav-item nav-link">
+          <%= link_to "Log In", login_path, class: "text-white" %>
+          </li>
+          <li class="nav-item nav-link">
+          <%= link_to "Sign up", signup_path, class: "text-white" %>
+          </li>
+        <% end %>
+
+      
         <%# <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
