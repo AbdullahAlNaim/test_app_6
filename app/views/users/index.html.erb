@@ -6,9 +6,11 @@
   <div class="flickr_pagination">
     <%= will_paginate @articles, :container => false %>
 </div>
-  <%= link_to 'Create new article',new_article_path, class: "btn btn-primary text-white making" %>
-
+  
     <% @users.each do |user|%>
+    <% if logged_in? && user == current_user %>
+    <%= link_to 'Create new article', new_article_path, class: "btn btn-primary text-white making" %>
+  <% end %>
     <div class="card text-center mb-3" style="width: 20rem;">
       <div class="card-body">
         <%= link_to user.username, user %>
@@ -24,7 +26,15 @@
         <div class="btn btn-primary text-white">
           <%= link_to 'View profile', user, class: "text-white" %>
           </div>
-        <%= link_to 'edit profile', edit_user_path(user), class: "btn btn-primary text-white" %>
+          <% if logged_in? %>
+            <% if user == current_user %>
+              <%= link_to 'edit profile', edit_user_path(user), class: "btn btn-primary text-white" %>
+            <% end %>
+            <% if current_user.admin? %>
+              <%= link_to "Delete user", user_path(user), class: "btn btn-outline-danger",
+              data:{confirm: "Are you sure?", turbo_method: :delete} %>
+            <% end %>
+          <% end %>
       </div>
       <p>
         Joined <%= user.created_at.strftime("%B %d %Y, %l:%M%P") %>

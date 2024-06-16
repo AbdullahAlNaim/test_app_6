@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
 
   def new
-    # @user = User.find(params[:email, :password])
   end
 
   def create

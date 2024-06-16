@@ -1,8 +1,9 @@
 <div class="container artic">
   <h1><%= @user.username %> profile</h1>
   <%= gravatar_for @user, size: 200 %>
-
+  <% if logged_in? && @user == current_user %>
   <%= link_to "Edit your profile", edit_user_path(@user) %>
+  <% end %>
   <div class="flickr_pagination">
     <%= will_paginate @articles, :container => false %>
 </div>

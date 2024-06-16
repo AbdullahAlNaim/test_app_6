@@ -9,6 +9,21 @@
         <li class="nav-item nav-link">
           <%= link_to 'About page', about_path, class: "text-white" %>
         </li>
+        
+
+        <!-- -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true">
+            Articles
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to 'View Articles', articles_path, class: "dropdown-item" %>
+             <%= link_to 'Create new article', new_article_path, class: "dropdown-item" %>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+
+
         <li class="nav-item nav-link">
           <%= link_to 'Articles', articles_path, class: "text-white"  %>
         </li>
@@ -17,9 +32,26 @@
         </li>
         
         <% if logged_in? %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true">
+            <%= "(Admin)" if current_user.admin? %> Profile[<%=current_user.username %>]
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+              <%= link_to "#{current_user.username} Profile", user_path(current_user), class: "dropdown-item" %>
+
+              <%= link_to "Delete profile", user_path(current_user), data:{turbo_method: :delete, confirm: "Are you sure?"}, class: "dropdown-item text-danger" %>
+
+            <a class="dropdown-item" href="#">Something else here</a>
+
+          </div>
+        </li>
+
         <li class="nav-item nav-link">
             <%= link_to current_user.username, user_path(current_user), class: "text-white" %>
           </li>
+          
           <li class="nav-item nav-link">
             <%= link_to "Log out", logout_path, class: "text-white",  data:{ "turbo-method": :delete } %>
           </li>

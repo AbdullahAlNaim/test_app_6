@@ -3,6 +3,11 @@
 <div class="flickr_pagination">
     <%= will_paginate @articles, :container => false %>
 </div>
+<div class="container artic">
+  <% if logged_in? %>
+  <%= link_to 'Create new article',new_article_path, class: "btn btn-primary text-white making" %>
+  <% end %>
+</div>
 <%= render 'article' %>
 
 <div class="flickr_pagination">
